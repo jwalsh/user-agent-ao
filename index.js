@@ -1,0 +1,1 @@
+exports.ao = require('./lib/ao').ao;
