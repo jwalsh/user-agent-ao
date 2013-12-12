@@ -25,3 +25,7 @@ _(Nothing yet)_
 ## License
 Copyright (c) 2013   
 Licensed under the MIT license.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jwalsh/aojs/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
