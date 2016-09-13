@@ -1,45 +1,15 @@
-var ao = require('../lib/ao.js').ao;
+'use strict';
 
-/*
-  ======== A Handy Little Nodeunit Reference ========
-  https://github.com/caolan/nodeunit
+const ao = require('../build/ao').default;
 
-  Test methods:
-    test.expect(numAssertions)
-    test.done()
-  Test assertions:
-    test.ok(value, [message])
-    test.equal(actual, expected, [message])
-    test.notEqual(actual, expected, [message])
-    test.deepEqual(actual, expected, [message])
-    test.notDeepEqual(actual, expected, [message])
-    test.strictEqual(actual, expected, [message])
-    test.notStrictEqual(actual, expected, [message])
-    test.throws(block, [error], [message])
-    test.doesNotThrow(block, [error], [message])
-    test.ifError(value)
-*/
+const uas = {
+    iPhone: "Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3"
+}
 
+const window = {
+    navigator: {
+        userAgent: uas.iPhone
+    }
+}
 
-
-exports['ao'] = {
-  setUp: function(done) {
-    // setup here
-    done();
-  },
-  'no args': function(test) {
-
-    test.expect(2);
-
-    // tests here
-    test.equal(typeof ao.is,
-               'function',
-               'should provide a base test');
-
-    test.equal(typeof ao.set,
-               'function',
-               'overrid user agent');
-
-    test.done();
-  }
-};
+console.log('iPhone', ao(uas.iPhone));
